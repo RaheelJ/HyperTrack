@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Parameters Default_File="project" Default_File_Type="FromConfig" version="20151101">
+    <path_type>relative_to_self</path_type>
+    <Name>Hypersonic Interceptor-1</Name>
+    <ID>0</ID>
+    <Selection_Execution>
+        <Category>General</Category>
+        <Algorithm>MPNG</Algorithm>
+        <Start_Distance>1600000</Start_Distance>
+        <Stop_Distance>800</Stop_Distance>
+        <Energy_Limit>2000000</Energy_Limit>
+    </Selection_Execution>
+    <Common>
+        <Position Latitude="71.9388951" Longitude="-105.8214808" Altitude="0" />
+        <x_vel>0</x_vel>
+        <y_vel>0</y_vel>
+        <z_vel>0</z_vel>
+    </Common>
+    <Hypersonic />
+    <Fractional />
+    <NonLinear_Proportional />
+    <Coordinated />
+    <CPNG />
+    <SMC />
+    <Parameters>
+        <command_max>100</command_max>
+        <speed_max>1000</speed_max>
+        <max_turning_rate>90</max_turning_rate>
+        <n>5</n>
+        <time_acc>50</time_acc>
+    </Parameters>
+</Parameters>

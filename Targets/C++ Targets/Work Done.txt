@@ -1,0 +1,4 @@
+1- Made some changes to the existing Matlab implementation of the ABH vehicle and developed a Matlab_dll function to provide a common access the class methods
+2- Added the target metrics i.e. time and distance to reach the destination
+3- Amended the C++ code for accessing the dll library to incorporate the interface via known data types of C++ and iTruthGenerator structures
+4- Translated the iTruthGenerator class to C++ and integrated the dll library with in its methods to successfully implement the ABH vehicle in C++

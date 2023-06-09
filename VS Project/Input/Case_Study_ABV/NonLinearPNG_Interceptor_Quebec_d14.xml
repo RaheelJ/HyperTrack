@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<Parameters Default_File="project" Default_File_Type="FromConfig" version="20151101">
+    <path_type>relative_to_self</path_type>
+    <Selection_Execution>
+        <Method>NonLinear_Proportional</Method>
+        <Start_Distance>1020000</Start_Distance>
+        <Stop_Distance>0</Stop_Distance>
+        <Energy_Limit>2000000</Energy_Limit>
+    </Selection_Execution>
+    <Common>
+        <Coop_Positions>
+            <point Latitude="46.8170971" Longitude="-71.2214469" Altitude="0">
+                <name>1</name>
+            </point>
+            <point Latitude="46.8182714" Longitude="-71.2180138" Altitude="0">
+                <name>2</name>
+            </point>
+            <point Latitude="46.8200343" Longitude="-71.2137224" Altitude="0">
+                <name>3</name>
+            </point>
+            <point Latitude="46.8201517" Longitude="-71.2090877" Altitude="0">
+                <name>4</name>
+            </point>
+            <point Latitude="46.820622" Longitude="-71.2035947" Altitude="0">
+                <name>5</name>
+            </point>
+            <point Latitude="46.8193304" Longitude="-71.1991316" Altitude="0">
+                <name>6</name>
+            </point>
+            <point Latitude="46.8163932" Longitude="-71.1967288" Altitude="0">
+                <name>7</name>
+            </point>
+            <point Latitude="46.8125158" Longitude="-71.1941542" Altitude="0">
+                <name>8</name>
+            </point>
+            <point Latitude="46.8076969" Longitude="-71.1939831" Altitude="0">
+                <name>9</name>
+            </point>
+            <point Latitude="46.8035826" Longitude="-71.1970728" Altitude="0">
+                <name>10</name>
+            </point>
+            <point Latitude="46.8012316" Longitude="-71.2032518" Altitude="0">
+                <name>11</name>
+            </point>
+            <point Latitude="46.7997032" Longitude="-71.2090878" Altitude="0">
+                <name>12</name>
+            </point>
+            <point Latitude="46.8011135" Longitude="-71.2181848" Altitude="0">
+                <name>13</name>
+            </point>
+            <point Latitude="46.8047572" Longitude="-71.2212746" Altitude="0">
+                <name>14</name>
+            </point>
+            <point Latitude="46.8084004" Longitude="-71.2247077" Altitude="0">
+                <name>15</name>
+            </point>
+            <point Latitude="46.8140421" Longitude="-71.2248796" Altitude="0">
+                <name>16</name>
+            </point>
+        </Coop_Positions>
+        <Position Latitude="46.7920763" Longitude="-71.2180193" Altitude="0" />
+        <Boost_Data>
+            <Boost_Speed>2600</Boost_Speed>
+            <Boost_Altitude>70000</Boost_Altitude>
+        </Boost_Data>
+    </Common>
+    <Hypersonic>
+        <Aiming_Data>
+            <K1>6</K1>
+            <K2>12</K2>
+        </Aiming_Data>
+        <Param_Lift>
+            <k1>6</k1>
+            <k2>0.001</k2>
+            <Mass>907.184739</Mass>
+            <Reference_Area>0.48387</Reference_Area>
+        </Param_Lift>
+        <Corridor>
+            <Slope>40</Slope>
+            <Bias>10</Bias>
+            <Dead_Band>800000</Dead_Band>
+            <Gain>20</Gain>
+            <Glide_Distance>1400000</Glide_Distance>
+            <Aim_Distance>500000</Aim_Distance>
+            <Kill_Distance>50000</Kill_Distance>
+        </Corridor>
+        <Param_Jet>
+            <Load_Long>3</Load_Long>
+            <Load_Lat>3</Load_Lat>
+            <ON_Threshold>0.008</ON_Threshold>
+            <OFF_Threshold>0.0</OFF_Threshold>
+        </Param_Jet>
+    </Hypersonic>
+    <Fractional>
+        <Fractional_Order>0.5</Fractional_Order>
+        <Size>10</Size>
+        <Proportional_Gain>4</Proportional_Gain>
+        <Differential_Gain>1</Differential_Gain>
+    </Fractional>
+    <NonLinear_Proportional>
+        <Tracking_Gain>0.00004</Tracking_Gain>
+        <Proportional_Gain>4</Proportional_Gain>
+        <Differential_Gain>0.8</Differential_Gain>
+    </NonLinear_Proportional>
+    <Coordinated>
+        <Leader>
+            <Proportional_Gain>3</Proportional_Gain>
+            <Scale_Coefficient>0.5</Scale_Coefficient>
+        </Leader>
+        <Followers>
+            <x>10000</x>
+            <y>10000</y>
+            <Beta_Gain>0.2</Beta_Gain>
+            <Gamma_Gain>8</Gamma_Gain>
+        </Followers>
+        <Followers>
+            <x>-10000</x>
+            <y>-10000</y>
+            <Beta_Gain>0.2</Beta_Gain>
+            <Gamma_Gain>0.8</Gamma_Gain>
+        </Followers>
+        <Followers>
+            <x>10000</x>
+            <y>10000</y>
+            <Beta_Gain>0.4</Beta_Gain>
+            <Gamma_Gain>0.6</Gamma_Gain>
+        </Followers>
+        <Followers>
+            <x>-10000</x>
+            <y>-10000</y>
+            <Beta_Gain>0.12</Beta_Gain>
+            <Gamma_Gain>0.8</Gamma_Gain>
+        </Followers>
+    </Coordinated>
+    <SMC>
+        <alpha>16</alpha>
+        <p>1</p>
+        <n11>2</n11>
+        <n22>2</n22>
+        <k11>10</k11>
+        <k22>10</k22>
+        <r0>5</r0>
+        <r1>1</r1>
+        <r2>0.97</r2>
+    </SMC>
+    <CPNG>
+        <aT_max>4</aT_max>
+        <cov_ratio>0.8</cov_ratio>
+        <N>4</N>
+        <p>0.2</p>
+    </CPNG>
+    <TPNG>
+        <aT_max>4</aT_max>
+        <cov_ratio>0.8</cov_ratio>
+        <N>4</N>
+        <num_M_max>20</num_M_max>
+    </TPNG>
+</Parameters>

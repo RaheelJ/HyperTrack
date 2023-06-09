@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<GuidanceLib Default_File="project" Default_File_Type="FromConfig" version="20151101">
+    <path_type>relative_to_self</path_type>
+    <Name>Missile Guidance-1</Name>
+    <ID>1</ID>
+	<StartTime>0</StartTime>
+    <GuidanceAlgo>
+        <Algorithm>PPNG</Algorithm>
+        <command_max>400</command_max>
+        <speed_max>2800</speed_max>
+        <max_turning_rate>8</max_turning_rate>
+        <n>2</n>
+        <time_acc>60</time_acc>
+    </GuidanceAlgo>
+    <trajectory>
+        <Waypoints>
+            <point Latitude="78" Longitude="-108" Altitude="0" />
+            <point Latitude="75.6540501" Longitude="-112.205221" Altitude="10000" />
+            <point Latitude="72.529941" Longitude="-99.5518717" Altitude="10000" />
+            <point Latitude="73.203556" Longitude="-93.1373265" Altitude="0" />
+        </Waypoints>
+        <x_vel>0</x_vel>
+        <y_vel>0</y_vel>
+        <z_vel>0</z_vel>
+    </trajectory>
+    <SimControl>
+        <Miss_Distance>800</Miss_Distance>
+        <Max_Travel>2000000</Max_Travel>
+    </SimControl>
+</GuidanceLib>

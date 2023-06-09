@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Units -->
+<!-- Distance/Length (meters) -->
+<!-- Mass (kilograms) -->
+<!-- Time (seconds) -->
+<!-- Angle (degrees) -->
+
+<!-- Methods: Air Breathing Hypersonic Vehicle -->
+
+<Configuration File_Type="Default" Top_Node="ABH_Vehicle" Path_Type="RelativeToApplication" FileTag = "Target">
+	<GroupStatic Name="Trajectory Endpoints" Display_Name="Trajectory_Endpoints" Columns="1" Collapsible="1">
+		<Control Name="Takeoff_Position" Type="MapPicker" Format="Point" SaveCoordinatesAs="node"/>
+		<Control Name="Landing_Position" Type="MapPicker" Format="Point" SaveCoordinatesAs="node"/>
+	</GroupStatic>
+	<GroupStatic Name="Trajectory Waypoints" Display_Name="Trajectory_Waypoints" Columns="1" Collapsible="1">
+		<GroupListControl Name="Waypoint Details" Output_Name="Waypoint_Details" Collapsible="1" Max ="10">
+			<Control Output_Name="Speed" Name="Speed(m/s)" Type="TextBox" Format="num"/>
+			<Control Name="Coordinates" Type="MapPicker" Format="Point" SaveCoordinatesAs="node"/>
+		</GroupListControl>
+	</GroupStatic>
+	<GroupStatic Name="Trajectory Constraints" Display_Name="Trajectory_Constraints" Columns="1" Collapsible="1">
+		<GroupListControl Name="No Fly Zones" Output_Name="No_Fly_Zones" Collapsible="1" Max ="10">
+			<Control Output_Name="Radius" Name="Radius(degree)" Type="TextBox" Format="num"/>
+			<Control Name="Origin" Type="MapPicker" Format="Point" SaveCoordinatesAs="node"/>
+		</GroupListControl>
+	</GroupStatic>
+	<Restrictions>
+		<To>
+			<Control Name="Radius(degree)"/>
+			<Group Name="Trajectory Waypoints"/>
+		</To>
+		<Min>0.1</Min>
+		<Max>20</Max>
+	</Restrictions>
+		<Restrictions>
+		<To>
+			<Control Name="Speed(m/s)"/>
+			<Group Name="Trajectory Constraints"/>
+		</To>
+		<Min>400</Min>
+		<Max>2800</Max>
+	</Restrictions>
+</Configuration>
